@@ -1,6 +1,6 @@
 "use strict";
 
-const ipUrl = 'http://api.ipify.org/?format=json';
+const ipUrl = 'https://api.ipify.org/?format=json';
 const userUrl = 'http://ip-api.com/json/';
 const btn = document.querySelector('.btnSearch');
 const root = document.querySelector('.root');
@@ -19,11 +19,12 @@ btn.addEventListener('click', (e) => {
                            root.insertAdjacentHTML("afterend",
                                `<div class="wrapper">
                                         <p class="page-text__user">Information about you:</p>
-                                        <p class="page-text">Your IP: ${request.ip}</p>
-                                        <p class="page-text">Country: ${data.country}</p>
                                         <p class="page-text">Country code: ${data.countryCode}</p>
+                                        <p class="page-text">Country: ${data.country}</p>
+                                        <p class="page-text">Region: ${data.region}</p>
                                         <p class="page-text">City: ${data.city}</p>
                                         <p class="page-text">Region name: ${data.regionName}</p>
+                                        <p class="page-text">Your IP: ${request.ip}</p>
                                     </div>`);
                            });
                        });
