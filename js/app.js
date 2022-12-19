@@ -18,16 +18,10 @@ btn.addEventListener('click', (e) => {
                        .then((data) => {
                            root.insertAdjacentHTML("afterend",
                                `<div class="wrapper">
-                                        <p class="page-text__user">Information about you:</p>
-                                        <p class="page-text">Country code: ${data.countryCode}</p>
-                                        <p class="page-text">Country: ${data.country}</p>
-                                        <p class="page-text">Region: ${data.region}</p>
-                                        <p class="page-text">City: ${data.city}</p>
-                                        <p class="page-text">Region name: ${data.regionName}</p>
-                                        <p class="page-text">Your IP: ${request.ip}</p>
-                                    </div>`);
+                                    <p class="page-text">Your IP: ${request.ip}</p>
+                                </div>`);
                            });
                        });
-};
+        };
    getIp();
 });
