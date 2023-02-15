@@ -19,6 +19,8 @@ btn.addEventListener('click', (e) => {
                            root.insertAdjacentHTML("afterend",
                                `<div class="wrapper">
                                     <p class="page-text">Your IP: ${request.ip}</p>
+                                    <p class="page-text">Your city: ${data.city}</p>
+                                    <p class="page-text">Your country: ${data.country}</p>
                                 </div>`);
                            });
                        });
